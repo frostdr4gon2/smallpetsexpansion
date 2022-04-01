@@ -20,6 +20,9 @@ public class Main extends JavaPlugin {
 	private static Main instance;
 	static RareCandy candy;
 
+	/* (non-Javadoc)
+	 * @see org.bukkit.plugin.java.JavaPlugin#onEnable()
+	 */
 	@Override
 	public void onEnable() {
 		instance = this;
@@ -35,6 +38,9 @@ public class Main extends JavaPlugin {
 
 	}
 
+	/**
+	 * Register the pets.
+	 */
 	private void registerPets() {
 
 		registerAbilities();
@@ -46,6 +52,9 @@ public class Main extends JavaPlugin {
 
 	}
 
+	/**
+	 * Registers the abilities.
+	 */
 	private void registerAbilities() {
 
 		SmallPetsCommons.getSmallPetsCommons().getAbilityManager().registerAbility("slowness_ability",
@@ -56,6 +65,9 @@ public class Main extends JavaPlugin {
 				WaterBreathingAbility.class);
 	}
 
+	/**
+	 * Register the commands.
+	 */
 	private void registerCommands() {
 		getCommand("giverarecandy").setExecutor(new GiveRareCandy());
 	}
@@ -65,14 +77,27 @@ public class Main extends JavaPlugin {
 
 	}
 
+	/**
+	 * Gets the single instance of Main.
+	 *
+	 * @return single instance of Main
+	 */
 	public static Main getInstance() {
 		return instance;
 	}
 
+	/**
+	 * Gets the candy instance.
+	 *
+	 * @return the candy instance
+	 */
 	public static RareCandy getCandy() {
 		return candy;
 	}
 
+	/**
+	 * Credits for plugin.
+	 */
 	private void credits() {
 		Bukkit.getLogger().info("Coded by Frostdr4gon2 - Owner of Play.OrcaCraft.com | OrcaCraft.com");
 	}

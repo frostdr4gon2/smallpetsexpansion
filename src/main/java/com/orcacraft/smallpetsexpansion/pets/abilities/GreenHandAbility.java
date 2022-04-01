@@ -17,16 +17,33 @@ import it.smallcode.smallpets.core.abilities.AbilityType;
 import it.smallcode.smallpets.core.abilities.eventsystem.AbilityEventHandler;
 import it.smallcode.smallpets.core.abilities.templates.StatBoostAbility;
 
+/**
+ * The Class GreenHandAbility.
+ */
 public class GreenHandAbility extends StatBoostAbility {
 
+	/**
+	 * Instantiates a new green hand ability.
+	 */
 	public GreenHandAbility() {
 		this(0);
 	}
 
+	/**
+	 * Instantiates a new green hand ability.
+	 *
+	 * @param maxExtraStat the max extra stat
+	 */
 	public GreenHandAbility(double maxExtraStat) {
 		this(maxExtraStat, 0);
 	}
 
+	/**
+	 * Instantiates a new green hand ability.
+	 *
+	 * @param maxExtraStat the max extra stat
+	 * @param minExtraStat the min extra stat
+	 */
 	public GreenHandAbility(double maxExtraStat, double minExtraStat) {
 
 		super(maxExtraStat, minExtraStat, NumberDisplayType.INTEGER);
@@ -34,6 +51,11 @@ public class GreenHandAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On crop break.
+	 *
+	 * @param e the PetBlockBreakEvent
+	 */
 	@AbilityEventHandler
 	public void onCropBreak(PetBlockBreakEvent e) {
 
@@ -80,12 +102,18 @@ public class GreenHandAbility extends StatBoostAbility {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see it.smallcode.smallpets.core.abilities.templates.StatBoostAbility#addBoost(org.bukkit.entity.Player, it.smallcode.smallpets.core.abilities.Ability)
+	 */
 	@Override
 	public void addBoost(Player arg0, Ability arg1) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/* (non-Javadoc)
+	 * @see it.smallcode.smallpets.core.abilities.templates.StatBoostAbility#removeBoost(org.bukkit.entity.Player, it.smallcode.smallpets.core.abilities.Ability)
+	 */
 	@Override
 	public void removeBoost(Player arg0, Ability arg1) {
 		// TODO Auto-generated method stub

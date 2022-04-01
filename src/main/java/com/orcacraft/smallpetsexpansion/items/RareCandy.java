@@ -19,12 +19,23 @@ import com.orcacraft.smallpetsexpansion.Main;
 import it.smallcode.smallpets.core.SmallPetsCommons;
 import it.smallcode.smallpets.core.pets.Pet;
 
+/**
+ * The Class RareCandy.
+ */
 public class RareCandy implements Listener {
 
+	/** The Constant rareCandy. */
 	final static ItemStack rareCandy = new ItemStack(Material.MAGMA_CREAM, 1);
+
+	/** The Constant rareCandyMeta. */
 	final static ItemMeta rareCandyMeta = rareCandy.getItemMeta();
+
+	/** The lore. */
 	static List<String> lore = new ArrayList<>();
 
+	/**
+	 * Instantiates a new rare candy.
+	 */
 	public RareCandy() {
 
 		rareCandyMeta.setDisplayName(ChatColor.LIGHT_PURPLE + "Rare Candy");
@@ -36,18 +47,39 @@ public class RareCandy implements Listener {
 		rareCandy.setItemMeta(rareCandyMeta);
 	}
 
+	/**
+	 * Gets the rare candy.
+	 *
+	 * @return the rare candy
+	 */
 	public static ItemStack getRareCandy() {
 		return rareCandy;
 	}
 
+	/**
+	 * Gets the rare candy meta.
+	 *
+	 * @return the rare candy meta
+	 */
 	public static ItemMeta getRareCandyMeta() {
 		return rareCandyMeta;
 	}
 
+	/**
+	 * Gets the lore.
+	 *
+	 * @return the lore
+	 */
 	public static List<String> getLore() {
 		return lore;
 	}
 
+	/**
+	 * On usage of the rare candy.
+	 *
+	 * @param e
+	 *            the PlayerInteractEvent
+	 */
 	@EventHandler
 	public void onUsage(PlayerInteractEvent e) {
 

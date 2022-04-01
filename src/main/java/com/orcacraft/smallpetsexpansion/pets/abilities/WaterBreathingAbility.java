@@ -18,17 +18,34 @@ import it.smallcode.smallpets.core.abilities.eventsystem.events.ServerShutdownEv
 import it.smallcode.smallpets.core.abilities.templates.StatBoostAbility;
 import it.smallcode.smallpets.core.manager.types.User;
 
+/**
+ * The Class WaterBreathingAbility.
+ */
 public class WaterBreathingAbility extends StatBoostAbility {
 
 
+	/**
+	 * Instantiates a new water breathing ability.
+	 */
 	public WaterBreathingAbility(){
 		this(0);
 	}
 
+	/**
+	 * Instantiates a new water breathing ability.
+	 *
+	 * @param maxExtraStat the max extra stat
+	 */
 	public WaterBreathingAbility(double maxExtraStat) {
 		this(maxExtraStat, 0);
 	}
 
+	/**
+	 * Instantiates a new water breathing ability.
+	 *
+	 * @param maxExtraStat the max extra stat
+	 * @param minExtraStat the min extra stat
+	 */
 	public WaterBreathingAbility(double maxExtraStat, double minExtraStat) {
 
 		super(maxExtraStat, minExtraStat, NumberDisplayType.INTEGER);
@@ -36,6 +53,11 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On level up.
+	 *
+	 * @param e the PetLevelUpEvent
+	 */
 	@AbilityEventHandler
 	public void onLevelUp(PetLevelUpEvent e){
 		if(e.getUser().getSelected() == null)
@@ -49,6 +71,11 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On select.
+	 *
+	 * @param e the PetSelectEvent
+	 */
 	@AbilityEventHandler
 	public void onSelect(PetSelectEvent e){
 
@@ -65,6 +92,11 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On deselect.
+	 *
+	 * @param e the PetDeselectEvent
+	 */
 	@AbilityEventHandler
 	public void onDeselect(PetDeselectEvent e){
 
@@ -75,6 +107,11 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On quit.
+	 *
+	 * @param e the QuitEvent
+	 */
 	@AbilityEventHandler
 	public void onQuit(QuitEvent e){
 
@@ -86,6 +123,11 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On join.
+	 *
+	 * @param e the JoinEvent
+	 */
 	@AbilityEventHandler
 	public void onJoin(JoinEvent e){
 
@@ -97,6 +139,11 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/**
+	 * On shutdown.
+	 *
+	 * @param e the ServerShutdownEvent
+	 */
 	@AbilityEventHandler
 	public void onShutdown(ServerShutdownEvent e){
 
@@ -108,6 +155,9 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see it.smallcode.smallpets.core.abilities.templates.StatBoostAbility#addBoost(org.bukkit.entity.Player, it.smallcode.smallpets.core.abilities.Ability)
+	 */
 	@Override
 	public void addBoost(Player p, Ability ability) {
 
@@ -126,6 +176,9 @@ public class WaterBreathingAbility extends StatBoostAbility {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see it.smallcode.smallpets.core.abilities.templates.StatBoostAbility#removeBoost(org.bukkit.entity.Player, it.smallcode.smallpets.core.abilities.Ability)
+	 */
 	@Override
 	public void removeBoost(Player p, Ability ability) {
 

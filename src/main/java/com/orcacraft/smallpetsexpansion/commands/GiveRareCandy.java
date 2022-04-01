@@ -10,8 +10,14 @@ import org.bukkit.inventory.ItemStack;
 
 import com.orcacraft.smallpetsexpansion.items.RareCandy;
 
+/**
+ * The Class GiveRareCandy.
+ */
 public class GiveRareCandy implements CommandExecutor {
 
+	/* (non-Javadoc)
+	 * @see org.bukkit.command.CommandExecutor#onCommand(org.bukkit.command.CommandSender, org.bukkit.command.Command, java.lang.String, java.lang.String[])
+	 */
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -53,6 +59,11 @@ public class GiveRareCandy implements CommandExecutor {
 		return true;
 	}
 
+	/**
+	 * Displays the correct usage for the sender.
+	 *
+	 * @param sender the sender
+	 */
 	private void usage(CommandSender sender) {
 
 		sender.sendMessage(

@@ -12,10 +12,22 @@ import it.smallcode.smallpets.core.pets.Pet;
 import it.smallcode.smallpets.core.pets.PetType;
 import it.smallcode.smallpets.v1_15.abilities.standard.SpeedBoostInBiomeAbility;
 
+/**
+ * The Class Orca.
+ */
 public class Orca extends Pet {
 
+	/** The biomes. */
 	final List<Biome> biomes = new ArrayList<>();
 
+	/**
+	 * Instantiates a new orca.
+	 *
+	 * @param id the id
+	 * @param owner the owner
+	 * @param xp the xp
+	 * @param useProtocolLib the use protocol lib
+	 */
 	public Orca(String id, Player owner, Long xp, Boolean useProtocolLib) {
 
 		super(id, owner, xp, useProtocolLib);
@@ -28,6 +40,9 @@ public class Orca extends Pet {
 		super.abilities.add(new SpeedBoostInBiomeAbility(biomes, 0, 3));
 	}
 
+	/**
+	 * Adds the biomes.
+	 */
 	private void addBiomes()
 	{
 		biomes.add(Biome.COLD_OCEAN);
@@ -43,6 +58,9 @@ public class Orca extends Pet {
 		biomes.add(Biome.WARM_OCEAN);
 	}
 
+	/* (non-Javadoc)
+	 * @see it.smallcode.smallpets.core.pets.Pet#updateTexture()
+	 */
 	@Override
 	protected void updateTexture()
 	{

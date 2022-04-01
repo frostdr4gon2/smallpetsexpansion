@@ -14,10 +14,26 @@ import it.smallcode.smallpets.core.SmallPetsCommons;
 import it.smallcode.smallpets.core.abilities.eventsystem.AbilityEventBus;
 import it.smallcode.smallpets.core.manager.types.User;
 
+/**
+ * The listener interface for receiving orcaBlockBreak events.
+ * The class that is interested in processing a orcaBlockBreak
+ * event implements this interface, and the object created
+ * with that class is registered with a component using the
+ * component's <code>addOrcaBlockBreakListener<code> method. When
+ * the orcaBlockBreak event occurs, that object's appropriate
+ * method is invoked.
+ *
+ * @see OrcaBlockBreakEvent
+ */
 public class OrcaBlockBreakListener implements Listener {
 
+	/**
+	 * On Block Break.
+	 *
+	 * @param e the BlockBreakEvent
+	 */
 	@EventHandler(priority = EventPriority.MONITOR)
-	public void onDamage(BlockBreakEvent e) {
+	public void onBlockBreak(BlockBreakEvent e) {
 
 		final Player p = e.getPlayer();
 
