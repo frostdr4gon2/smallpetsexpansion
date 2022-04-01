@@ -1,0 +1,7 @@
+name: SmallPetsExpansion
+main: com.orcacraft.smallpetsexpansion.Main
+version: 1.0.1
+api-version: 1.18
+depend: [SmallPets]
+commands:
+  giverarecandy:
