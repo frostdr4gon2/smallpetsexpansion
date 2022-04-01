@@ -37,7 +37,7 @@ public class Orca extends Pet {
 		addBiomes();
 
 		super.abilities.add(new WaterBreathingAbility());
-		super.abilities.add(new SpeedBoostInBiomeAbility(biomes, 0, 3));
+		super.abilities.add(new SpeedBoostInBiomeAbility(biomes, 0.01D, 0.25D));
 	}
 
 	/**

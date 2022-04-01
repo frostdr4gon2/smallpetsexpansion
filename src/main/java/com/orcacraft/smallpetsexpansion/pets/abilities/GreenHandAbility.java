@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -75,8 +74,6 @@ public class GreenHandAbility extends StatBoostAbility {
 
 					final ArrayList<ItemStack> item = new ArrayList<>(drops);
 
-					Bukkit.getLogger().info(item.toString());
-
 					final int randomNum = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 					final int boost = (int) ability.getExtraStat(e.getUser().getSelected().getLevel());
 
@@ -88,8 +85,6 @@ public class GreenHandAbility extends StatBoostAbility {
 
 							items.add(new ItemStack(mat, amount));
 
-							Bukkit.getLogger().info(items.toString());
-							Bukkit.getLogger().info(String.valueOf(amount));
 						}
 					}
 

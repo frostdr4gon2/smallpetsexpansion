@@ -1,6 +1,5 @@
 package com.orcacraft.smallpetsexpansion.pets.abilities;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -82,12 +81,6 @@ public class SlowAbility extends StatBoostAbility {
 		if(e.getPet().hasAbility(getID())) {
 
 			addBoost(e.getOwner(), e.getPet().getAbility(getID()));
-		}
-
-		Bukkit.getLogger().warning(getID() + " id");
-
-		for (int i = 0; i < e.getUser().getSelected().getAbilities().size(); i++) {
-			Bukkit.getLogger().warning(e.getUser().getSelected().getAbilities().get(i).getID());
 		}
 
 	}
